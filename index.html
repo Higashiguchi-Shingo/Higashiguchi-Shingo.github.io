@@ -18,25 +18,11 @@
     </head>
 
     <body id="page-top">
-        <!-- Button to change language-->
-        <header>
-            <nav>
-                <button onclick="switchLanguage('ja')">日本語</button>
-            </nav>
-        </header>
-        <script>
-            function switchLanguage(lang) {
-                if (lang === 'ja') {
-                    window.location.href = '/ja/index.html'; // 日本語版に移動
-                }
-            }
-        </script>
-
         <!-- Navigation-->
         <nav class="navbar navbar-expand-lg navbar-dark bg-primary fixed-top" id="sideNav">
             <a class="navbar-brand js-scroll-trigger" href="#page-top">
                 <span class="d-block d-lg-none">Shingo Higashiguchi</span>
-                <span class="d-block d-lg-block"><img class="img-fluid img-profile rounded-circle mx-auto mb-2" src="assets/img/profile.jpg" alt="..." /></span>
+                <span class="d-none d-lg-block"><img class="img-fluid img-profile rounded-circle mx-auto mb-2" src="assets/img/profile.jpg" alt="..." /></span>
             </a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation"><span class="navbar-toggler-icon"></span></button>
             <div class="collapse navbar-collapse" id="navbarResponsive">
@@ -47,6 +33,21 @@
                     <li class="nav-item"><a class="nav-link js-scroll-trigger" href="#awards">Awards & Grants</a></li>
                 </ul>
             </div>
+            <div class="bg-dark text-center py-2">
+                <button class="btn btn-light me-2" onclick="switchToJapanese()">日本語</button>
+                <button class="btn btn-light" onclick="switchToEnglish()">English</button>
+            </div>
+            <script>
+                function switchToJapanese() {
+                    // 日本語ページへの遷移
+                    window.location.href = '/ja/index.html'; // 日本語ページのURLにリダイレクト
+                }
+            
+                function switchToEnglish() {
+                    // 英語ページへの遷移
+                    window.location.href = '/index.html'; // 英語ページのURLにリダイレクト
+                }
+            </script>
         </nav>
 
         <!-- Page Content-->
@@ -70,6 +71,7 @@
                         I&rsquo;m also working as a project researcher at 
                         <a href=https://www.sanken.osaka-u.ac.jp/en/ target=_blank rel=noreferrer>SANKEN</a>
                         (The Institute of Scientific and Industrial Research at Osaka Univ.).
+                        <a href="/ja/index.html">日本語</a>
                     </p>
                     <div class="social-icons">
                         <a class="social-icon" href="#!"><i class="fab fa-linkedin-in"></i></a>
